@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CarShop.Data.Interfaces
 {
-    interface IAllCars
+    public interface IAllCars
     {
-        IEnumerable<Car> Cars { get; }
+        IEnumerable<Car> Car { get; }
 
         IEnumerable<Car> GetFavouriteCars { get; set; }
 
