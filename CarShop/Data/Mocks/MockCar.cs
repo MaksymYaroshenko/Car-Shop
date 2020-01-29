@@ -11,13 +11,14 @@ namespace CarShop.Data.Mocks
     {
         private readonly ICarCategory _carCategory = new MockCategory();
 
-        public IEnumerable<Car> Cars 
+        public IEnumerable<Car> Car
         {
             get
             {
                 return new List<Car>
                 {
-                    new Car { Name = "Tesla", Id = 0, LongDescription = "Long description", ShortDescription = "Short description", IsFavourite = true, Available = true, Category = _carCategory.AllCategories.First()}
+                    new Car { Name = "Tesla", Id = 0, LongDescription = "Long description", ShortDescription = "Short description", IsFavourite = true, Available = true, Category = _carCategory.AllCategories.First(), Price = 20000 },
+                    new Car { Name = "Audi", Id = 1, LongDescription = "Long description", ShortDescription = "Short description", IsFavourite = false, Available = true, Category = _carCategory.AllCategories.Last(), Price = 12000 }
                 };
             }
         }
