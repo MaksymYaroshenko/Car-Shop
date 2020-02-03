@@ -27,7 +27,7 @@ namespace CarShop
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<AppDBContext>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
             services.AddTransient<IAllCars, CarRepository>();
             services.AddTransient<ICarCategory, CategoryRepository>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
@@ -39,6 +39,10 @@ namespace CarShop
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
+
+            using var scope = app.ApplicationServices.CreateScope();
+            AppDBContent content = scope.ServiceProvider.GetRequiredService<AppDBContent>();
+            DBObjects.Initial(content);
         }
     }
 }

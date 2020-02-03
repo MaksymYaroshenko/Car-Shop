@@ -10,9 +10,9 @@ namespace CarShop.Data.Repository
 {
     public class CarRepository : IAllCars
     {
-        private readonly AppDBContext appDBContext;
+        private readonly AppDBContent appDBContext;
 
-        public CarRepository(AppDBContext appDBContext)
+        public CarRepository(AppDBContent appDBContext)
         {
             this.appDBContext = appDBContext;
         }
