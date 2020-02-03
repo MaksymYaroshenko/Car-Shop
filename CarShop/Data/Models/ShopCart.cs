@@ -4,7 +4,6 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CarShop.Data.Models
 {
@@ -32,7 +31,8 @@ namespace CarShop.Data.Models
 
         public void AddToCart(Car car)
         {
-            appDBContent.ShopCartItem.Add(new ShopCartItem { 
+            appDBContent.ShopCartItem.Add(new ShopCartItem
+            {
                 ShopCartId = Id,
                 Car = car,
                 Price = car.Price

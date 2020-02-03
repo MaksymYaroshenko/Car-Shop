@@ -1,10 +1,6 @@
 ﻿using CarShop.Data.Interfaces;
 using CarShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace CarShop.Controllers
 {
@@ -21,7 +17,7 @@ namespace CarShop.Controllers
 
         public ViewResult List()
         {
-            ViewBag.Title = "Page with automobiles"; 
+            ViewBag.Title = "Page with automobiles";
             CarListViewModel carListViewModel = new CarListViewModel
             {
                 GetAllCars = _allCars.Car,

@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using CarShop.Data;
 using CarShop.Data.Interfaces;
-using CarShop.Data.Mocks;
 using CarShop.Data.Models;
 using CarShop.Data.Repository;
 using Microsoft.AspNetCore.Builder;
