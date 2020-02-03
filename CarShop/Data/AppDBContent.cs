@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace CarShop.Data
 {
-    public class AppDBContext : DbContext
+    public class AppDBContent : DbContext
     {
-        public AppDBContext(DbContextOptions<AppDBContext> options) : base(options)
+        public AppDBContent(DbContextOptions<AppDBContent> options) : base(options)
         { 
         }
 
