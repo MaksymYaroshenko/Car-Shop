@@ -1,12 +1,8 @@
 ﻿using CarShop.Data.Interfaces;
 using CarShop.Data.Models;
-using CarShop.Data.Repository;
 using CarShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CarShop.Controllers
 {
@@ -35,7 +31,7 @@ namespace CarShop.Controllers
 
         public RedirectToActionResult AddToCart(int id)
         {
-            var item = _carRepository.Car.FirstOrDefault(i =>i.Id == id);
+            var item = _carRepository.Car.FirstOrDefault(i => i.Id == id);
             if (item != null)
             {
                 _shopCart.AddToCart(item);
