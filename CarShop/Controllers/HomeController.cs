@@ -15,7 +15,7 @@ namespace CarShop.Controllers
 
         public ViewResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Car-Shop";
             var homeCars = new HomeViewModel
             {
                 FavouriteCars = _carRepository.GetFavouriteCars
