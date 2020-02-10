@@ -27,6 +27,7 @@ namespace CarShop
             services.AddDbContext<AppDBContent>(options => options.UseSqlServer(_confString.GetConnectionString("DefaultConnection")));
             services.AddTransient<IAllCars, CarRepository>();
             services.AddTransient<ICarCategory, CategoryRepository>();
+            services.AddTransient<IAllOrders, OrdersRepository>();
             services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShopCart.GetCart(sp));
             services.AddMvc(options => options.EnableEndpointRouting = false);
